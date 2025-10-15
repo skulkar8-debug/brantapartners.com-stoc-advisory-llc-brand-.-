@@ -1349,18 +1349,20 @@ Here’s your full file with the mobile-only fix applied (I swapped in the guard
       syncMenuToViewport();
     }
 
-    // Enhanced contact form with better UX
+    // Enhanced contact form with real submission to Supabase Function
     const contactForm = document.getElementById('contactForm');
     const successMessage = document.getElementById('successMessage');
 
     if (contactForm) {
-      contactForm.addEventListener('submit', function(e) {
+      contactForm.addEventListener('submit', async function(e) {
         e.preventDefault();
 
         // Basic validation
-        const name = document.getElementById('name').value.trim();
-        const company = document.getElementById('company').value.trim();
-        const email = document.getElementById('email').value.trim();
+        const name = document.getElementById('name')?.value.trim() || '';
+        const company = document.getElementById('company')?.value.trim() || '';
+        const email = document.getElementById('email')?.value.trim() || '';
+        const phone = document.getElementById('phone')?.value.trim() || '';
+        const message = document.getElementById('message')?.value.trim() || '';
 
         if (!name || !company || !email) {
           alert('Please fill in all required fields.');
@@ -1380,18 +1382,50 @@ Here’s your full file with the mobile-only fix applied (I swapped in the guard
         submitBtn.textContent = 'Sending...';
         submitBtn.disabled = true;
 
-        // Simulate form submission
-        setTimeout(() => {
+        // Map to backend schema
+        const payload = {
+          name,
+          email,
+          company_name: company,
+          phone: phone || null,
+          how_can_we_help: message || null
+        };
+
+        // Resolve Supabase Function URL from project ref at runtime
+        const FUNCTION_URL = `https://exbetskuzlmeroaigdyy.functions.supabase.co/contact_webhook`;
+
+        try {
+          const res = await fetch(FUNCTION_URL, {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify(payload)
+          });
+
+          let result = { success: false };
+          try {
+            result = await res.json();
+          } catch (_) { /* non-JSON */ }
+
+          if (!res.ok || !result.success) {
+            const errMsg = (result && result.error) ? result.error : `Request failed (${res.status})`;
+            alert('Something went wrong: ' + errMsg);
+            submitBtn.textContent = originalText;
+            submitBtn.disabled = false;
+            return;
+          }
+
+          // Success UI
           successMessage.classList.add('show');
           this.reset();
           submitBtn.textContent = originalText;
           submitBtn.disabled = false;
-
-          // Hide success message after 5 seconds
-          setTimeout(() => {
-            successMessage.classList.remove('show');
-          }, 5000);
-        }, 1000);
+          setTimeout(() => { successMessage.classList.remove('show'); }, 5000);
+        } catch (err) {
+          console.error('Fetch failed:', err);
+          alert('Network error. Please try again.');
+          submitBtn.textContent = originalText;
+          submitBtn.disabled = false;
+        }
       });
     }
 
