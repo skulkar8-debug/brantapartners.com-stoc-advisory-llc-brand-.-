@@ -569,19 +569,23 @@
       z-index: 1;
     }
 
-    @media(min-width: 1100px){
-      .focus-grid{
-        grid-template-columns: repeat(3, minmax(0, 1fr));
+    .focus-grid.primary-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    .focus-grid.adjacent-grid {
+      max-width: 600px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    @media(min-width: 900px){
+      .focus-grid.primary-grid{
+        grid-template-columns: repeat(2, 1fr);
       }
     }
 
-    @media(min-width: 700px) and (max-width: 1099px){
-      .focus-grid{
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-      }
-    }
-
-    @media(max-width: 699px){
+    @media(max-width: 899px){
       .focus-grid{
         grid-template-columns: 1fr;
       }
@@ -664,15 +668,20 @@
     }
 
     .sector-category {
-      margin-bottom: 48px;
+      margin-bottom: 64px;
+    }
+
+    .sector-category:last-child {
+      margin-bottom: 0;
     }
 
     .sector-category h3 {
       font-family: 'Playfair Display', serif;
       font-size: 32px;
       color: var(--accent-gold);
-      margin-bottom: 24px;
+      margin-bottom: 32px;
       font-weight: 500;
+      text-align: center;
     }
 
     /* Individual focus item backgrounds */
@@ -997,7 +1006,7 @@
       
       <div class="sector-category">
         <h3>Primary Focus Areas</h3>
-        <div class="focus-grid">
+        <div class="focus-grid primary-grid">
           <div class="focus-item" data-bg="landscaping">
             <h3>Commercial Landscaping & Grounds Services</h3>
             <p>Ongoing landscape maintenance, grounds management, snow and ice services, turf care, irrigation, and enhancement work for commercial, municipal, and HOA clients.</p>
@@ -1019,7 +1028,7 @@
 
       <div class="sector-category">
         <h3>Adjacent & Select Sectors</h3>
-        <div class="focus-grid">
+        <div class="focus-grid adjacent-grid">
           <div class="focus-item" data-bg="trades">
             <h3>Selective Commercial Trades</h3>
             <p>Commercial HVAC, electrical services, and plumbing/mechanical services with recurring service components, institutional customer bases, and scalable operating models.</p>
