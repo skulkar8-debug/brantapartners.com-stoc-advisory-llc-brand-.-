@@ -9,11 +9,11 @@
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
   <style>
     :root{
-      /* Forest green and gold color palette - natural, reliable, growth-oriented */
-      --primary-green: #1e4620;
-      --secondary-green: #2d5a2e;
+      /* Professional blue and slate color palette - sophisticated, trustworthy */
+      --primary-blue: #1e3a5f;
+      --secondary-blue: #2c5282;
       --accent-gold: #d4af37;
-      --warm-gold: #d97706;
+      --warm-gold: #e3c565;
       --light-cream: #fef9e7;
       --dark-navy: #0f172a;
       --charcoal: #1e293b;
@@ -173,11 +173,11 @@
       position: relative;
       overflow: hidden;
       background:
-        linear-gradient(135deg, rgba(15, 23, 42, 0.85) 0%, rgba(30, 70, 32, 0.75) 100%),
+        linear-gradient(135deg, rgba(15, 23, 42, 0.85) 0%, rgba(30, 58, 95, 0.75) 100%),
         url('hero-section-branta.jpg') center/cover no-repeat,
         radial-gradient(1400px 700px at 80% 10%, rgba(212, 175, 55, 0.12), transparent 70%),
-        radial-gradient(1000px 600px at 20% 90%, rgba(45, 90, 46, 0.08), transparent 70%),
-        linear-gradient(45deg, var(--dark-navy) 0%, #1e4620 100%);
+        radial-gradient(1000px 600px at 20% 90%, rgba(44, 82, 130, 0.08), transparent 70%),
+        linear-gradient(45deg, var(--dark-navy) 0%, #1e3a5f 100%);
       padding: 160px 0 100px;
       font-family: 'Playfair Display', serif;
     }
@@ -323,7 +323,7 @@
     }
 
     .section--dark{
-      background: linear-gradient(135deg, var(--dark-navy) 0%, #1e4620 100%);
+      background: linear-gradient(135deg, var(--dark-navy) 0%, #1e3a5f 100%);
       color: #fff;
       position: relative;
     }
@@ -337,7 +337,7 @@
       bottom: 0;
       background:
         radial-gradient(800px 400px at 20% 20%, rgba(212, 175, 55, 0.03), transparent 50%),
-        radial-gradient(600px 300px at 80% 80%, rgba(45, 90, 46, 0.02), transparent 50%);
+        radial-gradient(600px 300px at 80% 80%, rgba(44, 82, 130, 0.02), transparent 50%);
       pointer-events: none;
     }
 
@@ -408,7 +408,7 @@
       left: 0;
       width: 100%;
       height: 4px;
-      background: linear-gradient(90deg, var(--primary-green), var(--accent-gold));
+      background: linear-gradient(90deg, var(--primary-blue), var(--accent-gold));
     }
 
     .about-card:hover {
@@ -462,7 +462,7 @@
       background: white;
       padding: 32px 24px;
       border-radius: 16px;
-      border: 1px solid rgba(30, 70, 32, 0.1);
+      border: 1px solid rgba(30, 58, 95, 0.1);
       box-shadow: var(--shadow-sm);
       transition: all 0.3s ease;
     }
@@ -470,7 +470,7 @@
     .value-prop-item:hover {
       transform: translateY(-4px);
       box-shadow: var(--shadow-md);
-      border-color: rgba(30, 70, 32, 0.2);
+      border-color: rgba(30, 58, 95, 0.2);
     }
 
     .value-icon {
@@ -515,9 +515,9 @@
       flex: 0 0 10px;
       height: 10px;
       border-radius: 50%;
-      background: linear-gradient(135deg, var(--secondary-green), var(--accent-gold));
+      background: linear-gradient(135deg, var(--secondary-blue), var(--accent-gold));
       margin-top: 8px;
-      box-shadow: 0 2px 4px rgba(30, 70, 32, 0.3);
+      box-shadow: 0 2px 4px rgba(30, 58, 95, 0.3);
     }
 
     /* Enhanced expectation items */
@@ -611,7 +611,7 @@
       content: '';
       position: absolute;
       inset: 0;
-      background: linear-gradient(135deg, rgba(15, 23, 42, 0.85) 0%, rgba(30, 70, 32, 0.85) 100%);
+      background: linear-gradient(135deg, rgba(15, 23, 42, 0.85) 0%, rgba(30, 58, 95, 0.85) 100%);
       z-index: 0;
       transition: opacity 0.4s ease;
       opacity: 1;
@@ -628,7 +628,7 @@
       left: 0;
       width: 100%;
       height: 2px;
-      background: linear-gradient(90deg, var(--secondary-green), var(--accent-gold));
+      background: linear-gradient(90deg, var(--secondary-blue), var(--accent-gold));
       transform: scaleX(0);
       transition: transform 0.3s ease;
     }
@@ -698,7 +698,7 @@
     .process-subtitle {
       font-family: 'Playfair Display', serif;
       font-size: 28px;
-      color: var(--primary-green);
+      color: var(--primary-blue);
       font-weight: 500;
       font-style: italic;
       margin-bottom: 0;
@@ -717,20 +717,20 @@
 
     .step-icon {
       flex: 0 0 100px; height: 100px; border-radius: 50%;
-      background: linear-gradient(135deg, var(--primary-green) 0%, var(--secondary-green) 50%, var(--accent-gold) 100%);
+      background: linear-gradient(135deg, var(--primary-blue) 0%, var(--secondary-blue) 50%, var(--accent-gold) 100%);
       display: flex; align-items: center; justify-content: center;
-      box-shadow: 0 8px 32px rgba(30, 70, 32, 0.3), 0 0 0 4px rgba(255, 255, 255, 0.1);
+      box-shadow: 0 8px 32px rgba(30, 58, 95, 0.3), 0 0 0 4px rgba(255, 255, 255, 0.1);
       position: relative; z-index: 2; transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
     }
     .step-icon::before {
       content: ''; position: absolute; inset: -4px; border-radius: 50%;
-      background: linear-gradient(135deg, var(--warm-gold), var(--accent-gold), var(--primary-green));
+      background: linear-gradient(135deg, var(--warm-gold), var(--accent-gold), var(--primary-blue));
       z-index: -1; opacity: 0; transition: opacity 0.3s ease;
     }
     .process-step:hover .step-icon::before { opacity: 1; }
     .process-step:hover .step-icon {
       transform: scale(1.15) rotate(5deg);
-      box-shadow: 0 12px 48px rgba(30, 70, 32, 0.4), 0 0 0 6px rgba(255, 255, 255, 0.2);
+      box-shadow: 0 12px 48px rgba(30, 58, 95, 0.4), 0 0 0 6px rgba(255, 255, 255, 0.2);
     }
 
     .step-number { color: white; font-size: 36px; font-weight: 700; font-family: 'Playfair Display', serif; text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); }
@@ -747,13 +747,13 @@
     }
     .step-content::before {
       content: ''; position: absolute; inset: 0; border-radius: 24px;
-      background: linear-gradient(135deg, var(--warm-gold), var(--accent-gold), var(--primary-green));
+      background: linear-gradient(135deg, var(--warm-gold), var(--accent-gold), var(--primary-blue));
       z-index: -1; opacity: 0; transition: opacity 0.4s ease;
     }
     .process-step:hover .step-content::before { opacity: 0.05; }
     .process-step:hover .step-content {
       transform: translateY(-8px) scale(1.02);
-      box-shadow: 0 16px 64px rgba(0, 0, 0, 0.12), 0 0 0 2px rgba(30, 70, 32, 0.1);
+      box-shadow: 0 16px 64px rgba(0, 0, 0, 0.12), 0 0 0 2px rgba(30, 58, 95, 0.1);
       background: linear-gradient(135deg, #ffffff 0%, #f8fafc 100%);
     }
     .step-content h4 { font-family: 'Playfair Display', serif; font-size: 22px; font-weight: 600; margin-bottom: 12px; color: var(--charcoal); }
@@ -761,7 +761,7 @@
 
     .step-details { display: flex; align-items: center; gap: 8px; }
     .time-estimate {
-      font-size: 14px; color: var(--primary-green); font-weight: 600; background: var(--light-cream);
+      font-size: 14px; color: var(--primary-blue); font-weight: 600; background: var(--light-cream);
       padding: 4px 12px; border-radius: 20px; display: inline-flex; align-items: center; gap: 6px;
     }
     .time-estimate::before { content: '⏱'; font-size: 12px; }
@@ -796,7 +796,7 @@
     .step::before {
       content: counter(step-counter); counter-increment: step-counter;
       position: absolute; top: -12px; left: 24px; width: 32px; height: 32px;
-      background: linear-gradient(135deg, var(--primary-green), var(--accent-gold));
+      background: linear-gradient(135deg, var(--primary-blue), var(--accent-gold));
       border-radius: 50%; display: flex; align-items: center; justify-content: center;
       color: white; font-weight: 700; font-size: 14px; box-shadow: var(--shadow-lg);
     }
@@ -817,8 +817,8 @@
     .avatar{ height: 100px; width: 100px; border-radius: 16px; object-fit: cover; background: linear-gradient(135deg, #e5e7eb, #d1d5db); box-shadow: var(--shadow-md); }
     .person h5{ font-weight: 600; margin-bottom: 4px; color: var(--charcoal); font-size: 18px; font-family: 'Playfair Display', serif; }
     .person p{ margin: 4px 0; color: var(--text-muted); font-size: 14px; line-height: 1.5; }
-    .person a{ color: var(--primary-green); text-decoration: none; font-weight: 600; transition: color 0.2s ease; }
-    .person a:hover { color: var(--secondary-green); }
+    .person a{ color: var(--primary-blue); text-decoration: none; font-weight: 600; transition: color 0.2s ease; }
+    .person a:hover { color: var(--secondary-blue); }
 
     /* Enhanced contact form */
     .contact-grid{ display: grid; grid-template-columns: 1fr; gap: 40px; margin-top: 32px; }
@@ -829,11 +829,11 @@
       width: 100%; padding: 16px; border: 2px solid var(--border-light); border-radius: 12px;
       background: #fff; font-family: inherit; font-size: 16px; color: var(--charcoal); transition: all 0.3s ease;
     }
-    .form input:focus, .form textarea:focus{ outline: none; border-color: var(--secondary-green); box-shadow: 0 0 0 4px rgba(30, 70, 32, 0.1); }
+    .form input:focus, .form textarea:focus{ outline: none; border-color: var(--secondary-blue); box-shadow: 0 0 0 4px rgba(30, 58, 95, 0.1); }
     .form textarea{ min-height: 140px; resize: vertical; }
     .submit{
       display: inline-block; width: 100%; padding: 18px 24px; border-radius: 12px; border: none;
-      background: linear-gradient(135deg, var(--dark-navy), var(--primary-green));
+      background: linear-gradient(135deg, var(--dark-navy), var(--primary-blue));
       color: #fff; font-weight: 700; font-size: 16px; cursor: pointer; transition: all 0.3s ease; position: relative; overflow: hidden;
     }
     .submit::before {
@@ -844,7 +844,7 @@
     .submit:hover{ transform: translateY(-2px); box-shadow: var(--shadow-lg); }
 
     .contact-meta{ font-size: 15px; color: var(--text-muted); line-height: 1.6; }
-    .contact-meta a{ color: var(--primary-green); text-decoration: none; font-weight: 600; }
+    .contact-meta a{ color: var(--primary-blue); text-decoration: none; font-weight: 600; }
 
     /* Enhanced FAQ */
     .faq{ padding: 100px 0 120px; background: linear-gradient(135deg, #fff 0%, #fafafa 100%); color: var(--charcoal); }
@@ -856,7 +856,7 @@
       font-size: 18px; font-weight: 600; cursor: pointer; position: relative; transition: all 0.3s ease;
       font-family: 'Playfair Display', serif;
     }
-    .faq-btn::before{ content: '▶'; position: absolute; left: 24px; top: 50%; transform: translateY(-50%); transition: all 0.3s ease; color: var(--primary-green); font-size: 16px; }
+    .faq-btn::before{ content: '▶'; position: absolute; left: 24px; top: 50%; transform: translateY(-50%); transition: all 0.3s ease; color: var(--primary-blue); font-size: 16px; }
     .faq-item.open .faq-btn::before{ transform: translateY(-50%) rotate(90deg); }
     .faq-panel{ display: none; padding: 0 24px 24px; color: var(--text-muted); line-height: 1.7; font-size: 16px; }
     .faq-item.open .faq-panel{ display: block; }
@@ -948,7 +948,7 @@
     <div class="container">
       <div class="eyebrow">What We Do</div>
       <h2 class="section-title">Buy-Side Advisory & Strategic Guidance</h2>
-      <p class="section-lead">Branta Partners provides buy-side advisory and strategic guidance to business owners exploring their next phase — whether that involves growth capital, a strategic partner, or a full transition.</p>
+      <p class="section-lead">Branta Partners provides buy-side advisory and strategic guidance to business owners exploring their next phase - whether that involves growth capital, a strategic partner, or a full transition.</p>
 
       <div class="about-grid">
         <div class="about-card">
@@ -1003,8 +1003,7 @@
       <div class="eyebrow">Core Sectors We Serve</div>
       <h2 class="section-title">Commercial Exterior & Essential Services</h2>
       <p class="section-lead" style="color:rgba(255,255,255,.85)">We focus on commercial exterior and essential services, where fragmentation, repeat demand, and operational leverage create attractive long-term outcomes for both owners and investors.</p>
-       </div>
-      </div>
+      
       <div class="sector-category">
         <h3>Primary Focus Areas</h3>
         <div class="focus-grid primary-grid">
@@ -1049,7 +1048,7 @@
         <h2 class="section-title">How We Work</h2>
         <p class="process-subtitle">Advisory, Relationship-Driven, and Tailored</p>
       </div>
-      <p class="section-lead" style="text-align: center; margin: 0 auto;">We believe successful outcomes start with alignment. Our role is not transactional — it is advisory, relationship-driven, and tailored to each situation.</p>
+      <p class="section-lead" style="text-align: center; margin: 0 auto;">We believe successful outcomes start with alignment. Our role is not transactional - it is advisory, relationship-driven, and tailored to each situation.</p>
 
       <div class="process-flow">
         <div class="process-timeline">
